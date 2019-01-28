@@ -1,0 +1,8 @@
+---
+ref: wib
+name: With Items Bug
+description: A workflow that demonstrates a with items bug
+keywords:
+version: 0.1.0
+author: Stanley
+email: stanley@stackstorm.com

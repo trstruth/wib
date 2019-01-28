@@ -1,0 +1,29 @@
+version: '1.0'
+
+description: Reproduce with items bug
+input:
+  - numbers
+
+tasks:
+
+  w_items_test:
+    with:
+      items: n in <% ctx(numbers) %>
+    action: wib.is_even
+    input:
+      num: <% item(n) %>
+    next:
+      - when: <% succeeded() %>
+        do: yay
+      - when: <% failed() %>
+        do: dang
+
+  yay:
+    action: core.local
+    input:
+      cmd: echo "yay"
+
+  dang:
+    action: core.local
+    input:
+      cmd: echo "dang"

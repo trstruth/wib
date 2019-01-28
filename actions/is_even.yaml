@@ -1,0 +1,12 @@
+---
+name: "is_even"
+runner_type: "python-script"
+description: "Checks if a number is even"
+enabled: true
+entry_point: "python/is_even.py"
+pack: "wib"
+parameters:
+  num:
+    type: "number"
+    description: "The number to be tested"
+    required: true

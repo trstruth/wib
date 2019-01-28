@@ -1,0 +1,12 @@
+---
+description: Reproduce with items bug
+enabled: true
+runner_type: orquesta
+entry_point: workflows/wib.yaml
+name: wib
+pack: wib
+parameters:
+  numbers:
+    required: true
+    type: array
+
